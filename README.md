@@ -6,7 +6,7 @@
 
 TaskMatrix is a planning-stage blueprint for an Agile Project Management platform that helps teams organize projects, manage tasks, collaborate with team members, and monitor project progress from one workspace.
 
-This repository documents the product requirements, prioritized MVP scope, four core UI wireframes, proposed system architecture, MongoDB data model, frontend state organization, and REST API contract. **Sprint 13 is a planning and architecture deliverable; the application is not represented as implemented or production-ready.**
+This repository documents the product requirements, prioritized MVP scope, four core UI wireframes, proposed system architecture, data model, frontend state organization, and API contract. **Sprint 13 is a planning and architecture deliverable; it does not claim that the application is implemented or production-ready.**
 
 ---
 
@@ -216,7 +216,7 @@ The Sprint 13 Figma file contains four desktop frames (1440 × 900):
 
 # 7. System Architecture
 
-TaskMatrix follows a layered full-stack architecture:
+The original Sprint 13 proposal follows a layered full-stack architecture:
 
 ```text
 User
@@ -240,7 +240,7 @@ The backend is planned as separate services/modules for authentication, projects
 
 # 8. Database ERD
 
-The planned MongoDB data model contains five primary collections:
+The original planning model proposed five MongoDB collections (the implemented Sprint 15 database currently focuses on user-owned tasks in Supabase Postgres):
 
 - `users`
 - `projects`
@@ -320,7 +320,7 @@ PUT    /api/notifications/:notificationId/read
 
 # 10. Frontend State Architecture
 
-Zustand is planned for application-wide state management.
+Zustand was planned for application-wide state management in Sprint 13. Sprint 14 implemented a Zustand auth store; Sprint 15 currently uses component-local React state for CRUD and analytics, which is a documented architecture deviation to consider in a future refactor.
 
 ```text
 TaskMatrix Application
@@ -441,7 +441,7 @@ These are exported PNG assets for the planning deliverable; editable draw.io sou
 
 | Requirement | Evidence | Status |
 | --- | --- | --- |
-| Phase 1 / P0: Public GitHub repository named `prodesk-capstone-[ProjectName]` | This repo is public, but its current name is `TaskMatrix`; required final name is `prodesk-capstone-TaskMatrix`. | **Action required: rename repository** |
+| Phase 1 / P0: Public GitHub repository following `prodesk-capstone-[ProjectName]` | Public repository is currently named `prodesk-capstone-TaskMatrix1`, which follows the prefix pattern but includes a `1` suffix. | **Naming cleanup recommended** |
 | Phase 1 / P0: README PRD with Project Name | Project Information table above. | Complete |
 | Phase 1 / P0: Designated Track | `Agile Project Management` in Project Information. | Complete |
 | Phase 1 / P0: Tech Stack | Frontend, Backend, Database, and Design & Development Tools sections. | Complete |
@@ -460,7 +460,7 @@ These are exported PNG assets for the planning deliverable; editable draw.io sou
 - [x] Proposed REST API endpoint plan
 - [x] MongoDB collection plan
 - [x] README image paths checked against repository filenames
-- [ ] Rename repository to `prodesk-capstone-TaskMatrix`
+- [x] Repository uses the `prodesk-capstone-` prefix; exact canonical name cleanup to `prodesk-capstone-TaskMatrix` remains recommended
 - [ ] Verify Figma sharing: anyone with the link can view
 
 ---
@@ -517,7 +517,7 @@ The following criteria define when the planned P0 MVP should be considered funct
 - [x] MVP acceptance criteria and key architecture assumptions
 - [x] README image paths match the committed asset filenames
 - [ ] Confirm the Figma file is accessible to the evaluator without requesting access
-- [ ] Rename the GitHub repository to `prodesk-capstone-TaskMatrix` and verify the new URL
+- [x] Current public repository URL and name documented above (canonical name without the `1` suffix remains recommended)
 - [ ] Confirm Figma sharing is set to anyone with the link can view
 
 ## Project Status
