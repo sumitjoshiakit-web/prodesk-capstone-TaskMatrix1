@@ -2,8 +2,6 @@
 
 > An Agile Project Management Platform for modern teams.
 
-> **Submission repository name required by the brief:** `prodesk-capstone-TaskMatrix`. The current GitHub repository is still named `TaskMatrix`; rename it in GitHub repository Settings before submitting so the repository-name requirement is actually met.
-
 ## Project Overview
 
 TaskMatrix is a planning-stage blueprint for an Agile Project Management platform that helps teams organize projects, manage tasks, collaborate with team members, and monitor project progress from one workspace.
