@@ -18,29 +18,28 @@ This repository documents the product requirements, prioritized MVP scope, four 
 | Designated Track | Agile Project Management |
 | Project Type | Enterprise Web Application |
 | Development Phase | Capstone Planning |
-| Required Repository Name | `prodesk-capstone-TaskMatrix` |
-| Current Repository URL | (https://github.com/sumitjoshiakit-web/TaskMatrix) 
+| Required Repository Naming Pattern | `prodesk-capstone-[ProjectName]` |
+| Current Repository Name | `prodesk-capstone-TaskMatrix1` (canonical name without the `1` suffix is recommended) |\n| Current Repository URL | https://github.com/sumitjoshiakit-web/prodesk-capstone-TaskMatrix1 |
 | Repository Visibility | Public |
 
 ---
 
 ## Tech Stack
 
-### Frontend
-- React.js
-- Vite
-- JavaScript
-- Tailwind CSS
-- Zustand
-- React Router
+### Sprint 13 proposed stack (planning baseline)
+- Frontend: React.js, Vite, JavaScript, Tailwind CSS, Zustand, React Router
+- Backend: Node.js, Express.js, REST API
+- Database: MongoDB
 
-### Backend
-- Node.js
-- Express.js
-- REST API
+### Implemented stack adopted from Sprint 14 onward
+- Frontend and routing: Next.js App Router, React, TypeScript
+- Authentication and backend-as-a-service: Supabase Auth and `@supabase/ssr`
+- Database: Supabase Postgres with Row Level Security (RLS)
+- State management: Zustand is used in the Sprint 14 authentication foundation; Sprint 15 currently uses local React state for task interactions
+- Analytics: Recharts in Sprint 15
 
-### Database
--MongoDB
+### Architecture evolution note
+The stack above the planning baseline was revised during implementation to keep authentication, routing, database access, and deployment in one Next.js + Supabase architecture. The React/Vite + Express + MongoDB diagrams and API contracts below describe the original proposal, not the implementation used in Sprints 14–15. See the later sprint repositories for the implemented architecture.
 
 ### Design & Development Tools
 - Git
@@ -505,6 +504,12 @@ The following criteria define when the planned P0 MVP should be considered funct
 - **API behavior:** Use consistent JSON responses, appropriate HTTP status codes, input validation, and a predictable error shape. The endpoint list in this document is a proposed contract, not a deployed API.
 - **Data ownership:** Users may only read or mutate projects and tasks for which they have the required membership/ownership permissions. The backend remains the source of truth for authorization.
 - **Planning boundary:** No application code, running backend, live database, or deployed product is claimed by this Sprint 13 repository.
+
+## Relationship to Sprints 14–15
+
+- Sprint 14 implementation: [prodesk-capstone--TaskMatrix-2](https://github.com/sumitjoshiakit-web/prodesk-capstone--TaskMatrix-2) — Next.js App Router, Supabase Auth, middleware route guards, and Zustand auth state.
+- Sprint 15 implementation: [prodesk-capstone-TaskMatrix3](https://github.com/sumitjoshiakit-web/prodesk-capstone-TaskMatrix3) — continues the Next.js + Supabase architecture and adds user-scoped task CRUD and Recharts analytics.
+- Sprint 13 wireframes and original architecture remain the product-planning record; later implementation decisions are documented as architecture evolution rather than being presented as the same stack.
 
 # 18. Submission Review Checklist
 
