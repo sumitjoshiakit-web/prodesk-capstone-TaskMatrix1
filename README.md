@@ -19,7 +19,8 @@ This repository documents the product requirements, prioritized MVP scope, four 
 | Project Type | Enterprise Web Application |
 | Development Phase | Capstone Planning |
 | Required Repository Naming Pattern | `prodesk-capstone-[ProjectName]` |
-| Current Repository Name | `prodesk-capstone-TaskMatrix1` (canonical name without the `1` suffix is recommended) |\n| Current Repository URL | https://github.com/sumitjoshiakit-web/prodesk-capstone-TaskMatrix1 |
+| Current Repository Name | `prodesk-capstone-TaskMatrix1` (canonical name without the `1` suffix is recommended) |
+| Current Repository URL | https://github.com/sumitjoshiakit-web/prodesk-capstone-TaskMatrix1 |
 | Repository Visibility | Public |
 
 ---
